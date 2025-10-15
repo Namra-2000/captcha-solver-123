@@ -1,1 +1,33 @@
-# CAPTCHA Solver Application This is a simple, single-file web application designed to demonstrate a basic CAPTCHA solving interface. It uses HTML, Tailwind CSS for styling, and JavaScript for client-side logic. The CAPTCHA image shows the text "ADCR3". ## Features - **Responsive Design:** Built with Tailwind CSS, ensuring a good user experience across various device sizes. - **Dynamic Image Loading:** The CAPTCHA image can be loaded from a URL specified in the query parameters (`?url=...`) or defaults to `sample.png`. - **Client-side Validation:** Compares user input against a predefined CAPTCHA solution. - **Visual Feedback:** Provides immediate feedback to the user on whether the CAPTCHA was solved correctly. ## Usage To use this application: 1.  Save the `index.html` file and `sample.png` (provided separately) in the same directory. 2.  Open `index.html` in your web browser. The application will default to displaying `sample.png`. 3.  To test with a different image, append a `url` query parameter to the `index.html` URL. For example: `file:///path/to/index.html?url=https://example.com/some-captcha-image.png` (Note: Browser security policies might restrict direct file URL access to external images. For best results, serve this via a local web server if using external URLs). 4.  Type "ADCR3" into the input field and click "Solve CAPTCHA" to see the correct solution message. ## Technologies Used - **HTML5:** For the page structure. - **Tailwind CSS:** For styling and responsive design. - **JavaScript:** For interactive functionality and CAPTCHA validation. ## License This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is a simple web-based CAPTCHA solver interface. It displays a CAPTCHA image and provides an input field for the user to enter the text they see in the image. Upon submission, it checks if the entered text matches the correct CAPTCHA solution.
+
+### Features
+- Displays a CAPTCHA image (default: `sample.png` or an image from a URL parameter).
+- Input field for users to enter CAPTCHA text.
+- "Solve CAPTCHA" button to submit the input.
+- Visual feedback (Correct/Incorrect) after submission.
+- Loading spinner during CAPTCHA verification.
+
+### How to Use
+1.  **Clone the repository** (or download `index.html`, `sample.png`).
+2.  **Open `index.html`** in your web browser.
+3.  **Enter the text** displayed in the CAPTCHA image into the input field.
+4.  **Click "Solve CAPTCHA"**.
+5.  The application will indicate whether your entry was correct or incorrect.
+
+### Custom CAPTCHA Image
+You can display a custom CAPTCHA image by passing its URL as a query parameter in the URL. For example:
+`index.html?url=https://example.com/your-captcha-image.png`
+
+### CAPTCHA Logic
+- The correct CAPTCHA text is hardcoded as `ADCR3` (case-insensitive).
+- The solution check is client-side for demonstration purposes.
+- A 1-second delay simulates network latency or server-side processing.
+
+### Technologies Used
+- HTML5
+- Tailwind CSS (for styling)
+- JavaScript (for logic)
+
+### File Structure
+- `index.html`: The main HTML file containing the structure, styling, and JavaScript logic.
+- `sample.png`: A sample CAPTCHA image used by default.
